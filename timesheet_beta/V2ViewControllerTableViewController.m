@@ -70,9 +70,18 @@
     if ([segue.identifier isEqualToString:@"AddPlayer"]) {
         
         UINavigationController *navigationController = segue.destinationViewController;
-        V2thingsDetailVCTableViewController *_view = [[navigationController viewControllers] objectAtIndex:1];
-        _view.delegate = self;
+        V2thingsDetailVCTableViewController *_view = [navigationController viewControllers][0];        _view.delegate = self;
     }
+}
+
+- (void)V2thingsDetailVCTableViewControllerDidCancel:(V2thingsDetailVCTableViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)V2thingsDetailVCTableViewControllerDidSave:(V2thingsDetailVCTableViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 /*
 // Override to support conditional editing of the table view.

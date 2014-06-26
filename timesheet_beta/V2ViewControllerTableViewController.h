@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "V2thingsDetailVCTableViewController.h"
 
-@interface V2ViewControllerTableViewController : UITableViewController
+@interface V2ViewControllerTableViewController : UITableViewController <V2thingsDetailVCTableViewControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *things;
 
