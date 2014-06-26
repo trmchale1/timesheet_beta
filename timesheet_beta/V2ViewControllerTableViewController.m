@@ -9,6 +9,7 @@
 #import "V2ViewControllerTableViewController.h"
 #import "things.h"
 #import "thingsCell.h"
+#import "V2thingsDetailVCTableViewController.h"
 @interface V2ViewControllerTableViewController ()
 
 @end
@@ -62,6 +63,16 @@
     cell.detailTextLabel.text = thing.game;
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"AddPlayer"]) {
+        
+        UINavigationController *navigationController = segue.destinationViewController;
+        V2thingsDetailVCTableViewController *_view = [[navigationController viewControllers] objectAtIndex:1];
+        _view.delegate = self;
+    }
 }
 /*
 // Override to support conditional editing of the table view.
