@@ -24,6 +24,7 @@
 		56AA1F6E195B46D6009DD1B7 /* V2ViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F6D195B46D6009DD1B7 /* V2ViewControllerTableViewController.m */; };
 		56AA1F71195B4816009DD1B7 /* things.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F70195B4816009DD1B7 /* things.m */; };
 		56AA1F74195B5E0A009DD1B7 /* thingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F73195B5E0A009DD1B7 /* thingsCell.m */; };
+		56AFFB12195C16FF00123C5E /* V2thingsDetailVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AFFB11195C16FF00123C5E /* V2thingsDetailVCTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		56AA1F70195B4816009DD1B7 /* things.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = things.m; sourceTree = "<group>"; };
 		56AA1F72195B5E0A009DD1B7 /* thingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thingsCell.h; sourceTree = "<group>"; };
 		56AA1F73195B5E0A009DD1B7 /* thingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thingsCell.m; sourceTree = "<group>"; };
+		56AFFB10195C16FF00123C5E /* V2thingsDetailVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V2thingsDetailVCTableViewController.h; sourceTree = "<group>"; };
+		56AFFB11195C16FF00123C5E /* V2thingsDetailVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V2thingsDetailVCTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				56AA1F72195B5E0A009DD1B7 /* thingsCell.h */,
 				56AA1F73195B5E0A009DD1B7 /* thingsCell.m */,
 				56AA1F49195B3C3C009DD1B7 /* Main.storyboard */,
+				56AFFB10195C16FF00123C5E /* V2thingsDetailVCTableViewController.h */,
+				56AFFB11195C16FF00123C5E /* V2thingsDetailVCTableViewController.m */,
 				56AA1F6C195B46D6009DD1B7 /* V2ViewControllerTableViewController.h */,
 				56AA1F6F195B4816009DD1B7 /* things.h */,
 				56AA1F70195B4816009DD1B7 /* things.m */,
@@ -270,6 +275,7 @@
 				56AA1F6E195B46D6009DD1B7 /* V2ViewControllerTableViewController.m in Sources */,
 				56AA1F71195B4816009DD1B7 /* things.m in Sources */,
 				56AA1F74195B5E0A009DD1B7 /* thingsCell.m in Sources */,
+				56AFFB12195C16FF00123C5E /* V2thingsDetailVCTableViewController.m in Sources */,
 				56AA1F44195B3C3C009DD1B7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +481,7 @@
 				56AA1F68195B3C3C009DD1B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56AA1F69195B3C3C009DD1B7 /* Build configuration list for PBXNativeTarget "timesheet_betaTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +490,7 @@
 				56AA1F6B195B3C3C009DD1B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
