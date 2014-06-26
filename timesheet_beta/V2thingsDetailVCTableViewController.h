@@ -16,8 +16,8 @@
 @end
 
 @interface  V2thingsDetailVCTableViewController : UITableViewController
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UILabel *detailUILabel;
+@property (weak, nonatomic) IBOutlet UITextField *nameTexy;
+@property (weak, nonatomic) IBOutlet UILabel *gameLabel;
 
 @property (nonatomic, weak) id <V2thingsDetailVCTableViewControllerDelegate> delegate;
 

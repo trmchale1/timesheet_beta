@@ -53,6 +53,14 @@
     [self.delegate  V2thingsDetailVCTableViewControllerDidSave:self];
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        [self.nameTexy becomeFirstResponder];
+    }
+}
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
