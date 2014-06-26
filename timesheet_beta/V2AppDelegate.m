@@ -21,21 +21,19 @@
     things *thing = [[things alloc] init];
     thing.name = @"Bill Evans";
     thing.game = @"Tic-Tac-Toe";
-    thing.rating = 4;
     [_things addObject:thing];
     
     thing = [[things alloc] init];
     thing.name = @"Oscar Peterson";
     thing.game = @"Spin the Bottle";
-    thing.rating = 5;
     [_things addObject:thing];
     
     thing = [[things alloc] init];
     thing.name = @"Dave Brubeck";
     thing.game = @"Texas Hold’em Poker";
-    thing.rating = 2;
     [_things addObject:thing];
     
+    NSLog(@"y = %@", _things);
     
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex:1];

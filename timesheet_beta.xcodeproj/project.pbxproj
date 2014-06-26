@@ -23,6 +23,7 @@
 		56AA1F63195B3C3C009DD1B7 /* timesheet_betaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F62195B3C3C009DD1B7 /* timesheet_betaTests.m */; };
 		56AA1F6E195B46D6009DD1B7 /* V2ViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F6D195B46D6009DD1B7 /* V2ViewControllerTableViewController.m */; };
 		56AA1F71195B4816009DD1B7 /* things.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F70195B4816009DD1B7 /* things.m */; };
+		56AA1F74195B5E0A009DD1B7 /* thingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F73195B5E0A009DD1B7 /* thingsCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		56AA1F6D195B46D6009DD1B7 /* V2ViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V2ViewControllerTableViewController.m; sourceTree = "<group>"; };
 		56AA1F6F195B4816009DD1B7 /* things.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = things.h; sourceTree = "<group>"; };
 		56AA1F70195B4816009DD1B7 /* things.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = things.m; sourceTree = "<group>"; };
+		56AA1F72195B5E0A009DD1B7 /* thingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thingsCell.h; sourceTree = "<group>"; };
+		56AA1F73195B5E0A009DD1B7 /* thingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thingsCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 			children = (
 				56AA1F46195B3C3C009DD1B7 /* V2AppDelegate.h */,
 				56AA1F47195B3C3C009DD1B7 /* V2AppDelegate.m */,
+				56AA1F72195B5E0A009DD1B7 /* thingsCell.h */,
+				56AA1F73195B5E0A009DD1B7 /* thingsCell.m */,
 				56AA1F49195B3C3C009DD1B7 /* Main.storyboard */,
 				56AA1F6C195B46D6009DD1B7 /* V2ViewControllerTableViewController.h */,
 				56AA1F6F195B4816009DD1B7 /* things.h */,
@@ -264,6 +269,7 @@
 				56AA1F4E195B3C3C009DD1B7 /* V2ViewController.m in Sources */,
 				56AA1F6E195B46D6009DD1B7 /* V2ViewControllerTableViewController.m in Sources */,
 				56AA1F71195B4816009DD1B7 /* things.m in Sources */,
+				56AA1F74195B5E0A009DD1B7 /* thingsCell.m in Sources */,
 				56AA1F44195B3C3C009DD1B7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

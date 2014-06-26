@@ -8,6 +8,7 @@
 
 #import "V2ViewControllerTableViewController.h"
 #import "things.h"
+#import "thingsCell.h"
 @interface V2ViewControllerTableViewController ()
 
 @end
@@ -51,17 +52,17 @@
 {
     return [self.things count];
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
+    thingsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
     
-    things  *thing = (self.things)[indexPath.row];
+    things *thing = (self.things)[indexPath.row];
     cell.textLabel.text = thing.name;
     cell.detailTextLabel.text = thing.game;
     
     return cell;
 }
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
