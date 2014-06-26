@@ -65,7 +65,7 @@
                     <navigationItem key="navigationItem" id="t4k-Bz-nVx">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="o4a-NV-471">
                             <connections>
-                                <segue destination="pvm-82-mKI" kind="modal" identifier="AddPlayer" modalTransitionStyle="coverVertical" id="bZK-be-t8y"/>
+                                <segue destination="pvm-82-mKI" kind="modal" identifier="AddThing" modalTransitionStyle="coverVertical" id="bZK-be-t8y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

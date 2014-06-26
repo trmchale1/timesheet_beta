@@ -7,6 +7,7 @@
 //
 
 #import "V2thingsDetailVCTableViewController.h"
+#import "things.h"
 
 @interface V2thingsDetailVCTableViewController ()
 
@@ -48,9 +49,11 @@
 - (IBAction)done:(id)sender
 
 {
-    NSLog(@"done");
-
-    [self.delegate  V2thingsDetailVCTableViewControllerDidSave:self];
+    
+    things *Things = [[things alloc] init];
+    Things.name = self.nameTexy.text;
+    Things.game = @"Chess";
+   // [self.delegate V2thingsDetailVCTableViewController:self didAddThing:Things];
 }
 
 

@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class V2thingsDetailVCTableViewController;
+@class things;
 
 @protocol V2thingsDetailVCTableViewControllerDelegate <NSObject>
 - (void)V2thingsDetailVCTableViewControllerDidCancel:(V2thingsDetailVCTableViewController *)controller;
-- (void)V2thingsDetailVCTableViewControllerDidSave:(V2thingsDetailVCTableViewController *)controller;
+- (void)V2thingsDetailVCTableViewController:(V2thingsDetailVCTableViewController *)controller didAddThing:(things *)Things;
 @end
 
 @interface  V2thingsDetailVCTableViewController : UITableViewController

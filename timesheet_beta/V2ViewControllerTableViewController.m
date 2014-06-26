@@ -67,10 +67,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"AddPlayer"]) {
+    if ([segue.identifier isEqualToString:@"AddThing"]) {
         
         UINavigationController *navigationController = segue.destinationViewController;
-        V2thingsDetailVCTableViewController *_view = [navigationController viewControllers][0];        _view.delegate = self;
+        V2thingsDetailVCTableViewController *view = [[navigationController viewControllers]  objectAtIndex:0];
+        view.delegate = self;
     }
 }
 
@@ -79,9 +80,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)V2thingsDetailVCTableViewControllerDidSave:(V2thingsDetailVCTableViewController *)controller
+
+- (void)V2thingsDetailVCTableViewController:(V2thingsDetailVCTableViewController *)controller didAddPlayer:(things *)Things
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self.things addObject:Things];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.things count] - 1) inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [self dismissViewControllerAnimated:YES completion:nil];
 }
 /*
 // Override to support conditional editing of the table view.
