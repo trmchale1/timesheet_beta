@@ -52,8 +52,11 @@
     
     things *Things = [[things alloc] init];
     Things.name = self.nameTexy.text;
+    NSLog(@"x = %@", Things.name);
     Things.game = @"Chess";
-   // [self.delegate V2thingsDetailVCTableViewController:self didAddThing:Things];
+    NSLog(@"x = %@", Things.game);
+
+    [self.delegate V2thingsDetailVCTableViewController:self didAddThing:Things];
 }
 
 
