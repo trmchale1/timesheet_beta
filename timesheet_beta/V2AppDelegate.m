@@ -16,6 +16,10 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.03 green:0.63 blue:0.97 alpha:1.0]];
     _things = [NSMutableArray arrayWithCapacity:20];
     
     things *thing = [[things alloc] init];

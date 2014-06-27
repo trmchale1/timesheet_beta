@@ -60,8 +60,11 @@
     
     things *thing = (self.things)[indexPath.row];
     cell.textLabel.text = thing.name;
-    cell.detailTextLabel.text = thing.game;
+    NSString *x = @"$ ";
     
+    NSString *combined = [NSString stringWithFormat:@"%@ %@", x, thing.game];
+    cell.detailTextLabel.text =  combined;
+    NSLog(@"%@", thing.game);
     return cell;
 }
 
