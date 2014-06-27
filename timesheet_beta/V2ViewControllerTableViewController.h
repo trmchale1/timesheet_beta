@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "V2thingsDetailVCTableViewController.h"
 
+
+
+#import "V2thingsDetailVCTableViewController.h"
+#import "addInvoice.h"
 @interface V2ViewControllerTableViewController : UITableViewController <V2thingsDetailVCTableViewControllerDelegate>
 
-@property (nonatomic, strong) NSMutableArray *things;
 
+@property (nonatomic) NSString *name;
+
+@property (nonatomic, strong) NSMutableArray *things;
 @end

@@ -24,6 +24,8 @@
 		56AA1F6E195B46D6009DD1B7 /* V2ViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F6D195B46D6009DD1B7 /* V2ViewControllerTableViewController.m */; };
 		56AA1F71195B4816009DD1B7 /* things.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F70195B4816009DD1B7 /* things.m */; };
 		56AA1F74195B5E0A009DD1B7 /* thingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F73195B5E0A009DD1B7 /* thingsCell.m */; };
+		56AF916E195DC3D800F94DAB /* Invoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF916D195DC3D800F94DAB /* Invoice.m */; };
+		56AF9171195DC7C800F94DAB /* addInvoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF9170195DC7C800F94DAB /* addInvoice.m */; };
 		56AFFB12195C16FF00123C5E /* V2thingsDetailVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AFFB11195C16FF00123C5E /* V2thingsDetailVCTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,10 @@
 		56AA1F70195B4816009DD1B7 /* things.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = things.m; sourceTree = "<group>"; };
 		56AA1F72195B5E0A009DD1B7 /* thingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thingsCell.h; sourceTree = "<group>"; };
 		56AA1F73195B5E0A009DD1B7 /* thingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thingsCell.m; sourceTree = "<group>"; };
+		56AF916C195DC3D800F94DAB /* Invoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invoice.h; sourceTree = "<group>"; };
+		56AF916D195DC3D800F94DAB /* Invoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invoice.m; sourceTree = "<group>"; };
+		56AF916F195DC7C800F94DAB /* addInvoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addInvoice.h; sourceTree = "<group>"; };
+		56AF9170195DC7C800F94DAB /* addInvoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addInvoice.m; sourceTree = "<group>"; };
 		56AFFB10195C16FF00123C5E /* V2thingsDetailVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V2thingsDetailVCTableViewController.h; sourceTree = "<group>"; };
 		56AFFB11195C16FF00123C5E /* V2thingsDetailVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V2thingsDetailVCTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,12 +133,16 @@
 				56AA1F46195B3C3C009DD1B7 /* V2AppDelegate.h */,
 				56AA1F47195B3C3C009DD1B7 /* V2AppDelegate.m */,
 				56AA1F72195B5E0A009DD1B7 /* thingsCell.h */,
+				56AF916F195DC7C800F94DAB /* addInvoice.h */,
+				56AF9170195DC7C800F94DAB /* addInvoice.m */,
 				56AA1F73195B5E0A009DD1B7 /* thingsCell.m */,
 				56AA1F49195B3C3C009DD1B7 /* Main.storyboard */,
 				56AFFB10195C16FF00123C5E /* V2thingsDetailVCTableViewController.h */,
 				56AFFB11195C16FF00123C5E /* V2thingsDetailVCTableViewController.m */,
 				56AA1F6C195B46D6009DD1B7 /* V2ViewControllerTableViewController.h */,
 				56AA1F6F195B4816009DD1B7 /* things.h */,
+				56AF916C195DC3D800F94DAB /* Invoice.h */,
+				56AF916D195DC3D800F94DAB /* Invoice.m */,
 				56AA1F70195B4816009DD1B7 /* things.m */,
 				56AA1F6D195B46D6009DD1B7 /* V2ViewControllerTableViewController.m */,
 				56AA1F4C195B3C3C009DD1B7 /* V2ViewController.h */,
@@ -271,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				56AA1F48195B3C3C009DD1B7 /* V2AppDelegate.m in Sources */,
+				56AF916E195DC3D800F94DAB /* Invoice.m in Sources */,
+				56AF9171195DC7C800F94DAB /* addInvoice.m in Sources */,
 				56AA1F4E195B3C3C009DD1B7 /* V2ViewController.m in Sources */,
 				56AA1F6E195B46D6009DD1B7 /* V2ViewControllerTableViewController.m in Sources */,
 				56AA1F71195B4816009DD1B7 /* things.m in Sources */,

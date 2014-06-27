@@ -55,8 +55,7 @@
     
     Things.name = self.nameTexy.text;
     NSLog(@"x = %@", Things.name);
-    Things.game = self.gameText.text;
-    NSLog(@"x = %@", Things.game);
+   
 
     [self.delegate V2thingsDetailVCTableViewController:self didAddThing:Things];
 }
@@ -66,7 +65,6 @@
 {
     if (indexPath.section == 0) {
         [self.nameTexy becomeFirstResponder];
-        [self.gameText becomeFirstResponder];
 
     }
 }

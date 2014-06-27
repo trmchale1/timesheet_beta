@@ -24,17 +24,14 @@
     
     things *thing = [[things alloc] init];
     thing.name = @"Bill Evans";
-    thing.game = @"Tic-Tac-Toe";
     [_things addObject:thing];
     
     thing = [[things alloc] init];
     thing.name = @"Oscar Peterson";
-    thing.game = @"Spin the Bottle";
     [_things addObject:thing];
     
     thing = [[things alloc] init];
     thing.name = @"Dave Brubeck";
-    thing.game = @"Texas Hold’em Poker";
     [_things addObject:thing];
     
     NSLog(@"y = %@", _things);

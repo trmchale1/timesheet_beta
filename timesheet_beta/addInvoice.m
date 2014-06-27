@@ -1,22 +1,20 @@
 //
-//  V2ViewControllerTableViewController.m
+//  addInvoice.m
 //  timesheet_beta
 //
-//  Created by Tim McHale on 6/25/14.
+//  Created by Tim McHale on 6/27/14.
 //  Copyright (c) 2014 Tim McHale. All rights reserved.
 //
 
+#import "addInvoice.h"
 #import "V2ViewControllerTableViewController.h"
 #import "things.h"
-#import "thingsCell.h"
-#import "V2thingsDetailVCTableViewController.h"
-#import "addInvoice.h"
-@interface V2ViewControllerTableViewController ()
+#import "Invoice.h"
+@interface addInvoice ()
 
 @end
 
-@implementation V2ViewControllerTableViewController
-
+@implementation addInvoice
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,8 +27,12 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+   NSString *x = [defaults objectForKey:@"cheese"];
+    NSLog(@"cheese = %@", x);
     
+    [super viewDidLoad];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -38,74 +40,28 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+
+
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [self.things count];
-}
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    thingsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    things *thing = (self.things)[indexPath.row];
-    cell.textLabel.text = thing.name;
-   
+    // Configure the cell...
     
     return cell;
 }
+*/
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"AddThing"]) {
-        
-        UINavigationController *navigationController = segue.destinationViewController;
-        V2thingsDetailVCTableViewController *view = [[navigationController viewControllers]  objectAtIndex:0];
-        view.delegate = self;
-    }
-}
-
-
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    things *thing = (self.things)[indexPath.row];
-    _name = thing.name;
-    NSLog(@"z = %@", _name);
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:_name forKey:@"cheese"];
-        [defaults synchronize];
-}
-
-
-
-- (void)V2thingsDetailVCTableViewControllerDidCancel:(V2thingsDetailVCTableViewController *)controller
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-- (void)V2thingsDetailVCTableViewController:(V2thingsDetailVCTableViewController *)controller didAddThing:(things *)Things
-{
-    [self.things addObject:Things];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.things count] - 1) inSection:0];
-  [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -155,4 +111,17 @@
 }
 */
 
+
+- (IBAction)done:(id)sender {
+    
+    Invoice *voice = [[Invoice alloc] init];
+    
+    voice.rate = self.rate.text;
+//    voice.hours = self.rate.text
+//    voice.tax = self.rate.text
+    
+    NSLog(@"rate = %@", voice.rate);
+    
+    
+}
 @end
