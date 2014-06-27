@@ -11,6 +11,7 @@
 
 
 @interface  addInvoice : UITableViewController 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 - (IBAction)done:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *rate;

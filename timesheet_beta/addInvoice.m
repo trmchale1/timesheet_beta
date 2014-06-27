@@ -31,6 +31,9 @@
    NSString *x = [defaults objectForKey:@"cheese"];
     NSLog(@"cheese = %@", x);
     
+    self.nameLabel.text = x;
+
+    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.

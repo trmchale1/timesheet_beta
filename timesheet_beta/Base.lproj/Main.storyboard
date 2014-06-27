@@ -327,13 +327,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="hours" destination="mIh-Cx-cNI" id="1Yk-Mw-7ON"/>
+                        <outlet property="nameLabel" destination="6vJ-xn-eM3" id="dsh-zM-jaQ"/>
                         <outlet property="rate" destination="jGw-ne-BYL" id="rhB-KK-ddd"/>
                         <outlet property="tax" destination="Zw9-pV-pjP" id="YFj-0q-1Hm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7oJ-NR-Q5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="-37"/>
+            <point key="canvasLocation" x="856" y="318"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="u3b-vU-8Sq">
