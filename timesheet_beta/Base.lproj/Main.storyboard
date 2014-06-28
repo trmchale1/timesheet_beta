@@ -318,8 +318,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Invoice" id="ccH-AZ-nZY">
                         <barButtonItem key="backBarButtonItem" title="Back" id="D7b-Eh-pNJ"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="NzT-ml-RGp"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NzT-ml-RGp">
+                            <connections>
+                                <action selector="cancel:" destination="UWy-xH-IFW" id="PaD-Sj-aCq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="fRc-Xg-Nkf">
+                            <color key="tintColor" red="0.99447930790000005" green="1" blue="0.99530487860000005" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="done:" destination="UWy-xH-IFW" id="pkK-VJ-0Vw"/>
                             </connections>

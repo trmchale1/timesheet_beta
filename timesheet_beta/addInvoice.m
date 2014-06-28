@@ -115,6 +115,10 @@
 */
 
 
+- (IBAction)cancel:(id)sender {
+               [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (IBAction)done:(id)sender {
     
     Invoice *voice = [[Invoice alloc] init];
