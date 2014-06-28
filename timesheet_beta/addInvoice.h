@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *rate;
 @property (weak, nonatomic) IBOutlet UITextField *hours;
 @property (weak, nonatomic) IBOutlet UITextField *tax;
+@property (weak, nonatomic) IBOutlet UITextView *notes;
+
 @property (weak, nonatomic) NSString *name;
 
 @end
