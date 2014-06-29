@@ -26,6 +26,9 @@
 		56AA1F74195B5E0A009DD1B7 /* thingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1F73195B5E0A009DD1B7 /* thingsCell.m */; };
 		56AF916E195DC3D800F94DAB /* Invoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF916D195DC3D800F94DAB /* Invoice.m */; };
 		56AF9171195DC7C800F94DAB /* addInvoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF9170195DC7C800F94DAB /* addInvoice.m */; };
+		56AF91B7195F6B9300F94DAB /* finalInvoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF91B6195F6B9300F94DAB /* finalInvoice.m */; };
+		56AF91B91960459400F94DAB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AF91B81960459400F94DAB /* MessageUI.framework */; };
+		56AF91BF1960750D00F94DAB /* pro.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF91BE1960750D00F94DAB /* pro.m */; };
 		56AFFB12195C16FF00123C5E /* V2thingsDetailVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AFFB11195C16FF00123C5E /* V2thingsDetailVCTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,11 @@
 		56AF916D195DC3D800F94DAB /* Invoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invoice.m; sourceTree = "<group>"; };
 		56AF916F195DC7C800F94DAB /* addInvoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addInvoice.h; sourceTree = "<group>"; };
 		56AF9170195DC7C800F94DAB /* addInvoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addInvoice.m; sourceTree = "<group>"; };
+		56AF91B5195F6B9300F94DAB /* finalInvoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = finalInvoice.h; sourceTree = "<group>"; };
+		56AF91B6195F6B9300F94DAB /* finalInvoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = finalInvoice.m; sourceTree = "<group>"; };
+		56AF91B81960459400F94DAB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		56AF91BD1960750D00F94DAB /* pro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pro.h; sourceTree = "<group>"; };
+		56AF91BE1960750D00F94DAB /* pro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pro.m; sourceTree = "<group>"; };
 		56AFFB10195C16FF00123C5E /* V2thingsDetailVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V2thingsDetailVCTableViewController.h; sourceTree = "<group>"; };
 		56AFFB11195C16FF00123C5E /* V2thingsDetailVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V2thingsDetailVCTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56AF91B91960459400F94DAB /* MessageUI.framework in Frameworks */,
 				56AA1F3A195B3C3C009DD1B7 /* CoreGraphics.framework in Frameworks */,
 				56AA1F3C195B3C3C009DD1B7 /* UIKit.framework in Frameworks */,
 				56AA1F38195B3C3C009DD1B7 /* Foundation.framework in Frameworks */,
@@ -119,6 +128,7 @@
 		56AA1F36195B3C3C009DD1B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56AF91B81960459400F94DAB /* MessageUI.framework */,
 				56AA1F37195B3C3C009DD1B7 /* Foundation.framework */,
 				56AA1F39195B3C3C009DD1B7 /* CoreGraphics.framework */,
 				56AA1F3B195B3C3C009DD1B7 /* UIKit.framework */,
@@ -137,6 +147,10 @@
 				56AF9170195DC7C800F94DAB /* addInvoice.m */,
 				56AA1F73195B5E0A009DD1B7 /* thingsCell.m */,
 				56AA1F49195B3C3C009DD1B7 /* Main.storyboard */,
+				56AF91BD1960750D00F94DAB /* pro.h */,
+				56AF91BE1960750D00F94DAB /* pro.m */,
+				56AF91B5195F6B9300F94DAB /* finalInvoice.h */,
+				56AF91B6195F6B9300F94DAB /* finalInvoice.m */,
 				56AFFB10195C16FF00123C5E /* V2thingsDetailVCTableViewController.h */,
 				56AFFB11195C16FF00123C5E /* V2thingsDetailVCTableViewController.m */,
 				56AA1F6C195B46D6009DD1B7 /* V2ViewControllerTableViewController.h */,
@@ -288,6 +302,8 @@
 				56AA1F71195B4816009DD1B7 /* things.m in Sources */,
 				56AA1F74195B5E0A009DD1B7 /* thingsCell.m in Sources */,
 				56AFFB12195C16FF00123C5E /* V2thingsDetailVCTableViewController.m in Sources */,
+				56AF91BF1960750D00F94DAB /* pro.m in Sources */,
+				56AF91B7195F6B9300F94DAB /* finalInvoice.m in Sources */,
 				56AA1F44195B3C3C009DD1B7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

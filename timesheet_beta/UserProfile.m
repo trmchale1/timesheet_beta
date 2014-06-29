@@ -1,21 +1,18 @@
 //
-//  addInvoice.m
+//  UserProfile.m
 //  timesheet_beta
 //
-//  Created by Tim McHale on 6/27/14.
+//  Created by Tim McHale on 6/29/14.
 //  Copyright (c) 2014 Tim McHale. All rights reserved.
 //
 
-#import "addInvoice.h"
-#import "V2ViewControllerTableViewController.h"
-#import "things.h"
-#import "Invoice.h"
-#import "finalInvoice.h"
-@interface addInvoice ()
+#import "UserProfile.h"
+
+@interface UserProfile ()
 
 @end
 
-@implementation addInvoice
+@implementation UserProfile
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,13 +25,8 @@
 
 - (void)viewDidLoad
 {
-         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-   NSString *x = [defaults objectForKey:@"cheese"];
-    NSLog(@"cheese = %@", x);
-    
-    self.nameLabel.text = x;
-
     [super viewDidLoad];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -42,16 +34,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-
-
-
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -112,74 +100,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-
-- (IBAction)cancel:(id)sender {
-               [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
-- (IBAction)save:(id)sender {
-    
-   
-
-    NSString *rateTxt = [_rate text];
-    NSString *hoursTxt = [_hours text];
-    NSString *taxRate = [_tax text];
-    NSString *emailTxt = [_email text];
-    int rate = [rateTxt intValue];
-    int hours = [hoursTxt intValue];
-    int tax = [taxRate intValue];
-    
-    int pretax_total = rate * hours;
-    
-    float tax_rate_maker = .01;
-    float tax_rate = tax * tax_rate_maker;
-    NSLog(@"tax rate = %f", tax_rate);
-    
-    float tax_total = pretax_total *tax_rate;
-    int total = pretax_total + tax_total;
-    NSLog(@"total %i", total);
-    NSString *totalTxt = [NSString stringWithFormat:@"%d", total];
-  
-
-    NSLog(@"rateTxt %@", rateTxt);
-    NSLog(@"hoursTxt %@", hoursTxt);
-    NSLog(@"taxRate %@", taxRate);
-
-    
-    Invoice *voice = [[Invoice alloc] init];
-    voice.name = self.nameLabel.text;
-    voice.rate = rateTxt;
-    voice.hours = hoursTxt;
-    voice.tax = taxRate;
-    voice.total = totalTxt;
-    voice.email = emailTxt;
-    
-    NSLog(@"name = %@", voice.name);
-    NSLog(@"rate = %i", voice.rate);
-    NSLog(@"total = %i", voice.total);
-    NSLog(@"tax = %i", voice.tax);
-    NSLog(@"email = %@", voice.email);
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:voice.name forKey:@"invoiceEmail"];
-    
-    NSUserDefaults *x = [NSUserDefaults standardUserDefaults];
-    [x setObject:voice.rate forKey:@"invoiceEmail2"];
-    
-    NSUserDefaults *z = [NSUserDefaults standardUserDefaults];
-    [z setObject:voice.hours forKey:@"invoiceEmail3"];
-    
-    NSUserDefaults *a = [NSUserDefaults standardUserDefaults];
-    [a setObject:voice.tax forKey:@"invoiceEmail4"];
-
-    NSUserDefaults *b = [NSUserDefaults standardUserDefaults];
-    [b setObject:voice.total forKey:@"invoiceEmail5"];
-    
-    NSUserDefaults *c = [NSUserDefaults standardUserDefaults];
-    [c setObject:voice.email forKey:@"invoiceEmail6"];
-
-
-}
 
 @end

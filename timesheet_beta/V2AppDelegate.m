@@ -21,7 +21,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor]];
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.03 green:0.63 blue:0.97 alpha:1.0]];
     _things = [NSMutableArray arrayWithCapacity:20];
-    
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
     things *thing = [[things alloc] init];
     thing.name = @"Bill Evans";
     [_things addObject:thing];
@@ -41,7 +41,7 @@
     V2ViewControllerTableViewController *V2ViewControllerTableViewController = [[navigationController viewControllers] objectAtIndex:0];
    V2ViewControllerTableViewController.things = _things;
     
-   
+
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application

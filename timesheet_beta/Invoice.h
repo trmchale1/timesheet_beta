@@ -10,12 +10,12 @@
 
 @interface Invoice : NSObject
 
-@property (nonatomic, copy) NSString *client;
-@property (nonatomic, copy) NSString *rate;
-@property (nonatomic, copy) NSString *hours;
-@property (nonatomic, copy) NSString *tax;
-@property (nonatomic, copy) NSString *total;
-@property (nonatomic, copy) NSString *notes;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic) NSString *rate;
+@property (nonatomic) NSString *hours;
+@property (nonatomic) NSString *tax;
+@property (nonatomic) NSString *total;
+@property (nonatomic) NSString *email;
 
 
 

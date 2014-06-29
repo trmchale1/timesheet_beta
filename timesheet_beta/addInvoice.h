@@ -10,16 +10,17 @@
 #import "V2ViewControllerTableViewController.h"
 
 
-@interface  addInvoice : UITableViewController 
+@interface  addInvoice : UITableViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 - (IBAction)cancel:(id)sender;
+- (IBAction)save:(id)sender;
 
 - (IBAction)done:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UITextField *rate;
 @property (weak, nonatomic) IBOutlet UITextField *hours;
 @property (weak, nonatomic) IBOutlet UITextField *tax;
-@property (weak, nonatomic) IBOutlet UITextView *notes;
-
 @property (weak, nonatomic) NSString *name;
+@property (weak, nonatomic) IBOutlet UITextField *email;
 
 @end
