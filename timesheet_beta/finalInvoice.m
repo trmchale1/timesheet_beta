@@ -67,65 +67,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)email_invoice:(id)sender {
     if ([MFMailComposeViewController canSendMail])
@@ -138,8 +79,6 @@
         
         [mailer setSubject:subject];
         
-        NSUserDefaults *defaults6 = [NSUserDefaults standardUserDefaults];
-        NSString *email_email = [defaults6 objectForKey:@"invoiceEmail6"];
         
         NSUserDefaults *defaults1 = [NSUserDefaults standardUserDefaults];
         NSString *client_email = [defaults1 objectForKey:@"invoiceEmail"];
@@ -156,13 +95,31 @@
         NSUserDefaults *defaults5 = [NSUserDefaults standardUserDefaults];
         NSString *total_email = [defaults5 objectForKey:@"invoiceEmail5"];
         
+        NSUserDefaults *defaults6 = [NSUserDefaults standardUserDefaults];
+        NSString *emailEmail = [defaults6 objectForKey:@"invoiceEmail6"];
+    
+        NSUserDefaults *defaults7 = [NSUserDefaults standardUserDefaults];
+        NSString *user_name = [defaults7 objectForKey:@"user_name"];
+        
+        NSUserDefaults *defaults8 = [NSUserDefaults standardUserDefaults];
+        NSString *user_email = [defaults8 objectForKey:@"user_email"];
+        
+        NSUserDefaults *defaults9 = [NSUserDefaults standardUserDefaults];
+        NSString *user_address = [defaults9 objectForKey:@"user_address"];
+        
+        NSUserDefaults *defaults10 = [NSUserDefaults standardUserDefaults];
+        NSString *user_city = [defaults10 objectForKey:@"user_city"];
+        
+        NSUserDefaults *defaults11 = [NSUserDefaults standardUserDefaults];
+        NSString *user_state = [defaults11 objectForKey:@"user_state"];
+        
        
         
-        NSArray *toRecipients = [NSArray arrayWithObjects:email_email, nil];
+        NSArray *toRecipients = [NSArray arrayWithObjects:emailEmail, user_email, nil];
         [mailer setToRecipients:toRecipients];
         
         
-        NSString *emailBody = [NSString stringWithFormat:@"<h1>Invoice</h1><br><p>To %@</p><br><p>%@ hours worked</p><br><p>at $%@ an hour</p><br><p>$%@ in tax</p><br><p>Total: $%@</p>", client_email, hours_email, rate_email, tax_email, total_email];
+        NSString *emailBody = [NSString stringWithFormat:@"<h1>Invoice</h1><br><p>%@</p><p>%@</p><p>%@</p><p>%@</p><p>To %@</p><br><p>%@ hours worked</p><br><p>at $%@ an hour</p><br><p>$%@ in tax</p><br><p>Total: $%@</p>", user_name, user_address, user_city, user_state, client_email, hours_email, rate_email, tax_email, total_email];
         [mailer setMessageBody:emailBody isHTML:YES];
         
         [self presentModalViewController:mailer animated:YES];
@@ -177,9 +134,6 @@
                                               otherButtonTitles:nil];
         [alert show];
 
-    
-    
-    
 }
 }
 

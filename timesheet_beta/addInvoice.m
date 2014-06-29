@@ -34,6 +34,9 @@
     
     self.nameLabel.text = x;
 
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.view addGestureRecognizer:gestureRecognizer];
+    
     [super viewDidLoad];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -43,7 +46,13 @@
 }
 
 
+- (void) hideKeyboard {
+    [_rate resignFirstResponder];
+    [_hours resignFirstResponder];
+    [_email resignFirstResponder];
+    [_tax resignFirstResponder];
 
+}
 
 
 
