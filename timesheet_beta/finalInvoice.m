@@ -119,7 +119,7 @@
         [mailer setToRecipients:toRecipients];
         
         
-        NSString *emailBody = [NSString stringWithFormat:@"<h1>Invoice</h1><br><p>%@</p><p>%@</p><p>%@</p><p>%@</p><p>To %@</p><br><p>%@ hours worked</p><br><p>at $%@ an hour</p><br><p>$%@ in tax</p><br><p>Total: $%@</p>", user_name, user_address, user_city, user_state, client_email, hours_email, rate_email, tax_email, total_email];
+        NSString *emailBody = [NSString stringWithFormat:@"<h4><center>Invoice</center></h4><p><center>%@<br>%@<br>%@<br>%@</center></p><p>To %@<br>%@ hours worked x $%@ an hour = Total: $%@</p>", user_name, user_address, user_city, user_state, client_email, hours_email, rate_email, total_email];
         [mailer setMessageBody:emailBody isHTML:YES];
         
         [self presentModalViewController:mailer animated:YES];
